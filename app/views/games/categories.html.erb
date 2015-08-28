@@ -1,0 +1,30 @@
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Marvel' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+
+	body{
+		padding:10%;
+		background: url('/assets/img2.gif') transparent;
+		background-repeat: no-repeat;
+		background-color: black;
+		background-position: 750px 350px;
+	}
+	</style>
+
+
+<form action="/games/categories" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<p>
+		<label for="category">Choose a Category:</label>
+		<select name="category" id="category" class="form-control">
+			<option value="Person">Person</option>
+			<option value="Place">Place</option>
+			<option value="Thing">Thing</option>
+			<option value="Animal">Animal</option>
+		</select>
+	</p>
+	<input type="submit" value="Select Category" class="btn btn-warning">
+</form>
