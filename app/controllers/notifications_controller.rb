@@ -25,8 +25,8 @@ skip_before_action :verify_authenticity_token
 			@word = animal[rand(0...animal.length)]
 		end
 
-		account_sid = 'AC4782ba1b809490121657cfa721ecb68f'
-		auth_token = '6f86febe92c397edf580fc453b0d6211'
+		account_sid = ["ENV"]
+		auth_token = ["ENV"]
 		@client = Twilio::REST::Client.new account_sid, auth_token
 		@client.account.messages.create({
 		:from => '+12053907745',
